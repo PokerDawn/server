@@ -1,82 +1,128 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-        <title>213软件技术选人系统</title>
-        <style>
-            *{
-                margin: 0px;
-                padding: 0px;
-                box-sizing: border-box;
-            }
-            #box{
-                border: 1px solid gray;
-                width: 400px;
-                height: 100vh;
-                border-radius: 10px;
-                box-shadow: 0px 0px 10px 10px gray;
-            }
-            #box_head{
-                background-color: rgb(33, 17, 59);
-                border-radius: 10px 10px 0px 0px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 30px;
-                color: orange;
-                font-weight: bold;
-            }
-            #a1{
-                width: 130px;
-				height: 50px;
-				border: none;
-				background-image: -webkit-repeating-linear-gradient(left, orange,darkred);
-				border-radius: 20px;
-				color: black;
-				line-height: 50px;
-				text-align: center;
-				font-size: 20px;
-            }
-            #random{
-                width: 300px;
-				height: 50px;
-                border: 1px solid black;
-                margin: 20px;
-                background-color: cadetblue;
-                border-radius: 10px;
-                font-size: 20px;
-                line-height: 50px;
-                color: black;
-            }
-            #a1:hover{
-				cursor: pointer;
-				box-shadow: 3px 5px 30px orange;
-			}
-        </style>
-    </head>
-    <body>
-    <center>
-        <div id="box">
-            <div id="box_head">随机选人</div>
-            <div id="random"></div>
-            <div id="a1">点击选人</div>
-        </div>
-    </center>
-    <script>
-        var Arr = ["王秋萍","刘梦琪","徐文园","郑秀云","李本梁","陆艺","徐西行","唐志文","熊正淇","朱元亨","吴逍遥","钱超","张晓月","杨青林","钱新阳","陈前程","吴佟","冯华龙","徐宇","陈宇豪","冯战","汪棋烨","关叶","胡恒翔","陈庚","王丹丹","仲文浩","王宝强","孙劭雷","鲁祺飞","汪泽洋","封顺","毕文涛","陈之杰","吴近","陈宇","韩斌","张泓宇","杨盛强","陈宣明","邱其航","谭小祥","刘青云","张俊杰","唐煜凯","金林键","朱如俊","张玉","葛世轩","朱文骏","李俊","倪冉","张凡","张鑫","杨涛","祖钺茗","吕伟福","林宇轩","金敬文","张堃","王翰宇","殷兆留","戴栋"];
-        document.getElementById("a1");
-        a1.onclick=function(){
-            var rd = document.getElementById("random");
-            var random = Math.floor(Math.random()*62);
-            if(Arr[random]!="葛世轩"){
-                rd.innerText=Arr[random];
-                console.log(random);
-            }else{
-                var r1= random -1;
-                rd.innerText=Arr[r1];
-                console.log(random);
-            }
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./bootstrap-4.6.1-dist/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </script>
-    </body>
+
+        .head_bg {
+            background-color: #0159a0;
+        }
+
+        .head_search {
+            position: relative;
+            top: 50%;
+        }
+
+        .jsly {
+            font-size: 3rem;
+            font-weight: bolder;
+            color: rgb(228, 207, 17);
+            font-family: 微软雅黑, 黑体
+        }
+
+        .dh {
+            margin-top: 0.6rem;
+        }
+
+        .box {
+            height: 11rem;
+            padding: 1rem;
+            box-shadow: 0px 0px 10px 5px gray;
+        }
+        .box1{
+            border: 1px solid black;
+            margin-left: 1rem;
+            box-shadow: 0px 0px 10px 5px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color: darkred;box-shadow: 0px 0px 10px 5px gray;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-sm-block d-none">
+                    <a class="col-4" style="color: grey;text-decoration: none;">学生</a>&nbsp;|&nbsp;
+                    <a class="col-4" style="color: grey;text-decoration: none;">教职工</a>&nbsp;|&nbsp;
+                    <a class="col-4" style="color: grey;text-decoration: none;">校友</a>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-7 col-sm-3 jsly ">江苏旅游</div>
+                <div class="col-5 col-sm-9">
+                    <nav class="navbar navbar-expand-md navbar-dark dh">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavbar" style="margin-left: 3rem;">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">首页</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">学院概况</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">招生政策</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">教育教学</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">科学研究</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: gainsboro;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" style="color: black;font-size: 3rem;">江旅·要闻</div>
+                <div class="col-12"><img src="http://www.jstc.edu.cn/uploadfile/20210406111202814.jpg"
+                        class="img-fluid"></div>
+                <div class="col-12" style="margin: 1rem;"></div>
+                <div class="col-6 col-sm-6"><img src="http://www.jstc.edu.cn/uploadfile/20210721191119280.jpg"
+                        class="img-fluid"></div>
+                <div class="col-6 col-sm-6"><img src="http://www.jstc.edu.cn/uploadfile/20220411102044903.jpg"
+                        class="img-fluid"></div>
+                <div class="col-12" style="margin: 1rem;"></div>
+                <div class="col-4 col-sm-4 text-center" style="color: darkred;">新闻</div>
+                <div class="col-4 col-sm-4 text-center" style="color: darkred;">校内通知</div>
+                <div class="col-4 col-sm-4 text-center" style="color: darkred;">图片</div>
+                <div class="col-12" style="margin: 1rem;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" style="margin: 2rem;"></div>
+            <div class="col-12 col-sm-2" style="font-size: 3rem;margin-left: 1rem;">今<br>日<br>大<br>事<br></div>
+            <div class="col-3 col-sm-2 box1" style="background-color: rgb(162, 61, 61);color: white;font-size: 1.3rem;">王立慧曾经言道:<br>这种学生就是傻逼中的战斗机</div>
+            <div class="col-3 col-sm-2 box1" style="background-color: rgb(47, 92, 139);color: white;font-size: 1.3rem;">紧急通知:<br>213软件技术2班陈之杰同学因脱裤子放屁被逮捕</div>
+            <div class="col-3 col-sm-2 box1">1</div>
+            <div class="col-3 col-sm-2 box1">1</div>
+            <div class="col-12" style="margin: 2rem;"></div>
+        </div>
+    </div>
+</body>
+
 </html>
