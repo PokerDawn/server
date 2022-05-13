@@ -40,7 +40,7 @@
             left: 32%;
         }
         #back:hover{
-            background-color: rgba(123, 163, 68, 0.486);
+            background-color: orange;
             transition: 0.5s;
         }
         #back:link{
@@ -72,11 +72,11 @@
             left: 17%;
         }
         #left:hover{
-            background-color: rgba(123, 163, 68, 0.486);
+            background-color: orange;
             transition: 0.5s;
         }
         #right:hover{
-            background-color: rgba(123, 163, 68, 0.486);
+            background-color: orange;
             transition: 0.5s;
         }
         #right{
@@ -94,20 +94,61 @@
             top: 80%;
             left: 75%;
         }
+        #search{
+            width: 100px;
+            height: 600px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: rgba(250, 235, 215, 0.486);
+        }
+        #search a{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(161, 42, 9);
+            float: left;
+            font-weight: bold;
+        }
+        #search a:hover{
+            background-color: orange;
+            transition: 0.5s;
+        }
+        #search a:link{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+<div id="APP">
     <div id="box">
         <img :src="src">
         <a id="left" @click="left"><-</a>
         <a href="./index.html" id="back">返回主页面</a>
         <a id="right" @click="right">-></a>
     </div>
-    
+    <div id="search">
+        <a @click="search(1)">百万年物价</a>
+        <a @click="search(2)">千万年物价</a>
+        <a @click="search(3)">亿年物价</a>
+        <a @click="search(4)">十亿年物价</a>
+        <a @click="search(5)">百亿年物价</a>
+        <a @click="search(6)">千亿年物价</a>
+        <a @click="search(7)">仔仔物价</a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+        <a></a>
+    </div>
+</div>
     <script src="./bootstrap-4.6.1-dist/js/vue.min.js"></script>
     <script>
         const vm =new Vue({
-            el: '#box',
+            el: '#APP',
             data:{
                 src:'https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg',
                 nub: 1,
@@ -164,6 +205,18 @@
                         }
                     }
                 },
+                search(n){
+                    this.nub=n;
+                    switch(this.nub){
+                            case 1:this.src='https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg';break;
+                            case 2:this.src='https://image.mc9y.com/2022/05/13/9146be93852d5.jpg';break;
+                            case 3:this.src='https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg';break;
+                            case 4:this.src='https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg';break;
+                            case 5:this.src='https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg';break;
+                            case 6:this.src='https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg';break;
+                            case 7:this.src='https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg';break;
+                        }
+                }
             }
         })
     </script>
