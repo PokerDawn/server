@@ -1,140 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./bootstrap-4.6.1-dist/js/jquery.min.js"></script>
-    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
-    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
-		<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script> -->
-    <title>江苏旅游大事件</title>
+    <title>灵元世纪</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        *{
+            margin: 0px;
+            padding: 0px;
             box-sizing: border-box;
         }
-
-        .head_bg {
-            background-color: #0159a0;
+        body{
+            background-image: url(https://image.mc9y.com/2022/05/13/3fd856fa6e14a.jpeg);
+            background-size: 150%;
+            background-attachment: fixed;
         }
-
-        .head_search {
-            position: relative;
-            top: 50%;
+        #head{
+            width: 100%;
+            height: 80px;
+            background-color: rgba(24, 22, 22, 0.496);
         }
-
-        .jsly {
-            font-size: 2.5rem;
-            font-weight: bolder;
-            color: rgb(228, 207, 17);
-            font-family: 微软雅黑, 黑体
+        #head img{
+            margin-left: 100px;
+            float: left;
         }
-
-        .dh {
-            margin-top: 0.6rem;
+        #head a{
+            width: 200px;
+            height: 80px;
+            line-height: 80px;
+            font-weight: bold;
+            float: left;
+            text-align: center;
+            color: white;
         }
-
-        .box {
-            height: 11rem;
-            padding: 1rem;
-            box-shadow: 0px 0px 10px 5px gray;
+        #head a:hover{
+            background-color: rgb(234, 124, 73);
+            transition: 0.5s;
         }
-        .box1{
-            border: 1px solid black;
-            margin-left: 1rem;
-            box-shadow: 0px 0px 10px 5px gray;
+        #head a:link{
+            text-decoration: none;
+        }
+        #img1{
+            float: right;
         }
     </style>
 </head>
-
 <body>
-    <div class="container-fluid fixed-top" style="background-color: darkred;box-shadow: 0px 0px 10px 5px gray;">
-        <div class="container ">
-            <div class="row">
-                <div class="col-12 d-sm-block d-none">
-                    <a class="col-4" style="color: grey;text-decoration: none;">学生</a>&nbsp;|&nbsp;
-                    <a class="col-4" style="color: grey;text-decoration: none;">教职工</a>&nbsp;|&nbsp;
-                    <a class="col-4" style="color: grey;text-decoration: none;">校友</a>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-7 col-sm-3 jsly ">江苏旅游</div>
-                <div class="col-5 col-sm-9">
-                    <nav class="navbar navbar-expand-md navbar-dark dh">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#collapsibleNavbar" style="margin-left: 3rem;">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                            <ul class="navbar-nav ">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">首页</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">学院概况</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">招生政策</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">教育教学</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;font-size: 1.3rem;">科学研究</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+    <div id="APP">
+        <div id="head">
+            <img src="https://image.mc9y.com/2022/05/13/73da2bf9b298f.jpg" width="80px">
+            <a>主页</a>
+            <a href="./物价表.html">物价表</a>
+            <a>玩法介绍</a>
+            <a>游戏特色</a>
+            <a>最新公告</a>
+            <img src="./img/每周任务.png" width="60px" id="img1">
         </div>
-    </div>
-
-    <div class="container-fluid" style="background-color: gainsboro;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" style="margin: 3rem;"></div>
-                <div class="col-12 text-center" style="color: black;font-size: 3rem;">江旅·要闻</div>
-                <div class="col-12"><img src="http://www.jstc.edu.cn/uploadfile/20210406111202814.jpg"
-                        class="img-fluid"></div>
-                <div class="col-12" style="margin: 1rem;"></div>
-                <div class="col-6 col-sm-6"><img src="http://www.jstc.edu.cn/uploadfile/20210721191119280.jpg"
-                        class="img-fluid"></div>
-                <div class="col-6 col-sm-6"><img src="http://www.jstc.edu.cn/uploadfile/20220411102044903.jpg"
-                        class="img-fluid"></div>
-                <div class="col-12" style="margin: 1rem;"></div>
-                <div class="col-4 col-sm-4 text-center" style="color: darkred;">新闻</div>
-                <div class="col-4 col-sm-4 text-center" style="color: darkred;">校内通知</div>
-                <div class="col-4 col-sm-4 text-center" style="color: darkred;">图片</div>
-                <div class="col-12" style="margin: 1rem;"></div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12" style="margin: 2rem;"></div>
-            <div class="col-12 col-sm-2 d-none d-sm-block" style="font-size: 3rem;margin-left: 1rem;">今<br>日<br>大<br>事<br></div>
-            <div class="col-12 col-sm-2 d-block d-sm-none text-center" style="font-size: 3rem;margin-left: 1rem;">今日大事</div>
-            <div class="" style="margin-left:1.2rem;"></div>
-            <div class="col-3 col-sm-2 box1" style="background-color: rgb(162, 61, 61);color: white;font-size: 1.3rem;">通知<br>吴逍遥翻墙掉河里了，望周知</div>
-            <div class="col-3 col-sm-2 box1" style="background-color: rgb(47, 92, 139);color: white;font-size: 1.3rem;">紧急通知:<br>213软件技术2班陈之杰同学因脱裤子放屁被逮捕</div>
-            <div class="col-3 col-sm-2 box1" style="background-color: rgb(58, 127, 115);color: white;font-size: 1.3rem;">震惊！<br>殷兆留同学打王者把队友骂死了</div>
-            <div class="col-12" style="margin: 2rem;"></div>
-            <div class="col-12 col-sm-2 d-none d-sm-block" style="font-size: 3rem;margin-left: 1rem;"></div>
-            <div class="" style="margin-left:1.2rem;"></div>
-            <div class="col-3 col-sm-2 box1" style="background-color: rgb(162, 61, 61);color: white;font-size: 1.3rem;">通知！<br>请各位注意保护身体,胡恒翔同学睡觉从床上掉下来了</div>
-            <div class="col-3 col-sm-2 box1" style="background-color: rgb(47, 92, 139);color: white;font-size: 1.3rem;">通知!<br>213软件技术2班金林键同学霸凌同学被开除</div>
-            <div class="col-3 col-sm-2 box1" style="background-color: rgb(58, 127, 115);color: white;font-size: 1.3rem;">通知！<br>殷兆留同学一个呼噜把床震塌了</div>
-            <div class="col-12" style="margin: 2rem;"></div>
-        </div>
+            
     </div>
 </body>
-
 </html>
