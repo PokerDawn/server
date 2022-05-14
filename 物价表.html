@@ -54,7 +54,9 @@
         }
         #box img{
             width: 600px;
+            height: 450px;
             float: left;
+            overflow: hidden;
         }
         #left{
             background-color: rgba(250, 235, 215, 0.486);
@@ -73,10 +75,12 @@
         }
         #left:hover{
             background-color: orange;
+            cursor: pointer;
             transition: 0.5s;
         }
         #right:hover{
             background-color: orange;
+            cursor: pointer;
             transition: 0.5s;
         }
         #right{
@@ -112,16 +116,58 @@
         #search a:hover{
             background-color: orange;
             transition: 0.5s;
+            cursor: pointer;
         }
         #search a:link{
             text-decoration: none;
+        }
+        #dz{
+            width: 150px;
+            height: 800px;
+            float: right;
+            background-color: rgba(121, 120, 119, 0.286);
+        }
+        #dz a{
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(161, 42, 9);
+            float: left;
+            font-weight: bold;
+        }
+        #dz a:hover{
+            background-color: orange;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        #dz a:hover ul{
+            display: block;
+        }
+        #dz ul{
+            display: none;
+        }
+        #dz li{
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(161, 42, 9);
+            float: left;
+            font-weight: bold;
+            list-style-type: none;
+        }
+        #dz li:hover{
+            background-color: rgb(208, 91, 32);
+            transition: 0.5s;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 <div id="APP">
     <div id="box">
-        <img :src="src">
+        <img :src="src" width="">
         <a id="left" @click="left"><-</a>
         <a href="./index.html" id="back">返回主页面</a>
         <a id="right" @click="right">-></a>
@@ -141,6 +187,17 @@
         <a></a>
         <a></a>
     </div>
+    <div id="dz">
+        <a>武器技能定制
+            <ul>
+                <li @click="dz(1)">冥火斩杀</li>
+                <li @click="dz(2)">易伤</li>
+                <li @click="dz(3)">致残打击</li>
+                <li @click="dz(4)">死亡传送</li>
+            </ul>
+        </a>
+    </div>
+    
 </div>
     <script src="./bootstrap-4.6.1-dist/js/vue.min.js"></script>
     <script>
@@ -161,6 +218,14 @@
                 'https://image.mc9y.com/2022/05/14/d0e9de52b475e.jpg',
                 'https://image.mc9y.com/2022/05/14/ca7973e875d13.jpg',
                 ],
+                img_dz: [
+                '',
+                'https://image.mc9y.com/2022/05/15/265ffb282838b.png',
+                'https://image.mc9y.com/2022/05/15/f7070180246ff.png',
+                'https://image.mc9y.com/2022/05/15/24251780e79fa.png',
+                'https://image.mc9y.com/2022/05/15/3e48748cdfdd4.png',
+                ],
+                nub_dz: 1,
             },
             methods:{
                 left(){
@@ -185,6 +250,10 @@
                 search(n){
                     this.nub=n;
                     this.src=this.img[this.nub];
+                },
+                dz(n){
+                    this.nub_dz=n;
+                    this.src=this.img_dz[this.nub_dz];
                 }
             }
         })
