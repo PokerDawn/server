@@ -137,8 +137,8 @@
         <a @click="search(5)">百亿年物价</a>
         <a @click="search(6)">千亿年物价</a>
         <a @click="search(7)">仔仔物价</a>
-        <a></a>
-        <a></a>
+        <a @click="search(8)">假面骑士物价</a>
+        <a @click="search(9)">神位物价</a>
         <a></a>
         <a></a>
         <a></a>
@@ -152,70 +152,42 @@
             data:{
                 src:'https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg',
                 nub: 1,
+                img: [
+                '',
+                'https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg',
+                'https://image.mc9y.com/2022/05/13/9146be93852d5.jpg',
+                'https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg',
+                'https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg',
+                'https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg',
+                'https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg',
+                'https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg',
+                'https://image.mc9y.com/2022/05/14/d0e9de52b475e.jpg',
+                'https://image.mc9y.com/2022/05/14/ca7973e875d13.jpg',
+                ],
             },
             methods:{
                 left(){
                     console.log(this.nub);
                     if(this.nub===1){
-                        this.nub=7;
-                        switch(this.nub){
-                            case 1:this.src='https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg';break;
-                            case 2:this.src='https://image.mc9y.com/2022/05/13/9146be93852d5.jpg';break;
-                            case 3:this.src='https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg';break;
-                            case 4:this.src='https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg';break;
-                            case 5:this.src='https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg';break;
-                            case 6:this.src='https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg';break;
-                            case 7:this.src='https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg';break;
-                        }
+                        this.nub=9;
+                        this.src=this.img[this.nub];
                     }else{
                         this.nub-=1;
-                        switch(this.nub){
-                            case 1:this.src='https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg';break;
-                            case 2:this.src='https://image.mc9y.com/2022/05/13/9146be93852d5.jpg';break;
-                            case 3:this.src='https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg';break;
-                            case 4:this.src='https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg';break;
-                            case 5:this.src='https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg';break;
-                            case 6:this.src='https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg';break;
-                            case 7:this.src='https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg';break;
-                        }
+                        this.src=this.img[this.nub];
                     }
                 },
                 right(){
-                    if(this.nub===7){
+                    if(this.nub===9){
                         this.nub=1;
-                        switch(this.nub){
-                            case 1:this.src='https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg';break;
-                            case 2:this.src='https://image.mc9y.com/2022/05/13/9146be93852d5.jpg';break;
-                            case 3:this.src='https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg';break;
-                            case 4:this.src='https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg';break;
-                            case 5:this.src='https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg';break;
-                            case 6:this.src='https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg';break;
-                            case 7:this.src='https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg';break;
-                        }
+                        this.src=this.img[this.nub];
                     }else{
                         this.nub+=1;
-                        switch(this.nub){
-                            case 1:this.src='https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg';break;
-                            case 2:this.src='https://image.mc9y.com/2022/05/13/9146be93852d5.jpg';break;
-                            case 3:this.src='https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg';break;
-                            case 4:this.src='https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg';break;
-                            case 5:this.src='https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg';break;
-                            case 6:this.src='https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg';break;
-                            case 7:this.src='https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg';break;
-                        }
+                        this.src=this.img[this.nub];
                     }
                 },
                 search(n){
                     this.nub=n;
-                    switch(this.nub){
-                            case 1:this.src='https://image.mc9y.com/2022/05/13/bdd93b2a1cace.jpg';break;
-                            case 2:this.src='https://image.mc9y.com/2022/05/13/9146be93852d5.jpg';break;
-                            case 3:this.src='https://image.mc9y.com/2022/05/13/b196b696eeecb.jpg';break;
-                            case 4:this.src='https://image.mc9y.com/2022/05/13/5b538f0d17621.jpg';break;
-                            case 5:this.src='https://image.mc9y.com/2022/05/13/eb88d78be5c4c.jpg';break;
-                            case 6:this.src='https://image.mc9y.com/2022/05/13/1ee9c35bdb0ae.jpg';break;
-                            case 7:this.src='https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg';break;
-                        }
+                    this.src=this.img[this.nub];
                 }
             }
         })
