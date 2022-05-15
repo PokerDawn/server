@@ -184,8 +184,10 @@
         <a @click="search(9)">神位物价</a>
         <a @click="search(10)">材料价格(1)</a>
         <a @click="search(11)">材料价格(2)</a>
-        <a></a>
-        <a></a>
+        <a @click="search(12)">兑换表(1)</a>
+        <a @click="search(13)">兑换表(2)</a>
+        <a @click="search(14)">兑换表(3)</a>
+        <a @click="search(15)">兑换表(4)</a>
     </div>
     <div id="dz">
         <a>武器技能定制
@@ -219,6 +221,10 @@
                 'https://image.mc9y.com/2022/05/14/ca7973e875d13.jpg',
                 'https://image.mc9y.com/2022/05/15/ece4ff25fe530.jpg',
                 'https://image.mc9y.com/2022/05/15/5786cee664673.jpg',
+                'https://image.mc9y.com/2022/05/15/86beef05898a9.jpg',
+                'https://image.mc9y.com/2022/05/15/a9cefe182d703.jpg',
+                'https://image.mc9y.com/2022/05/15/519a6e134f65e.jpg',
+                'https://image.mc9y.com/2022/05/15/080219d051dc1.jpg',
                 ],
                 img_dz: [
                 '',
@@ -233,7 +239,7 @@
                 left(){
                     console.log(this.nub);
                     if(this.nub===1){
-                        this.nub=11;
+                        this.nub=15;
                         this.src=this.img[this.nub];
                     }else{
                         this.nub-=1;
@@ -241,7 +247,7 @@
                     }
                 },
                 right(){
-                    if(this.nub===11){
+                    if(this.nub===15){
                         this.nub=1;
                         this.src=this.img[this.nub];
                     }else{
