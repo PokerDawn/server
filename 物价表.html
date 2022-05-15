@@ -182,8 +182,8 @@
         <a @click="search(7)">仔仔物价</a>
         <a @click="search(8)">假面骑士物价</a>
         <a @click="search(9)">神位物价</a>
-        <a></a>
-        <a></a>
+        <a @click="search(10)">材料价格(1)</a>
+        <a @click="search(11)">材料价格(2)</a>
         <a></a>
         <a></a>
     </div>
@@ -217,6 +217,8 @@
                 'https://image.mc9y.com/2022/05/13/b5a3d45a3298b.jpg',
                 'https://image.mc9y.com/2022/05/14/d0e9de52b475e.jpg',
                 'https://image.mc9y.com/2022/05/14/ca7973e875d13.jpg',
+                'https://image.mc9y.com/2022/05/15/ece4ff25fe530.jpg',
+                'https://image.mc9y.com/2022/05/15/5786cee664673.jpg',
                 ],
                 img_dz: [
                 '',
@@ -231,7 +233,7 @@
                 left(){
                     console.log(this.nub);
                     if(this.nub===1){
-                        this.nub=9;
+                        this.nub=11;
                         this.src=this.img[this.nub];
                     }else{
                         this.nub-=1;
@@ -239,7 +241,7 @@
                     }
                 },
                 right(){
-                    if(this.nub===9){
+                    if(this.nub===11){
                         this.nub=1;
                         this.src=this.img[this.nub];
                     }else{
